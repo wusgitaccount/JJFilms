@@ -65,10 +65,28 @@ body{
 }
 .grid > .footer {
     grid-area:footer;
-    background:#72c2f1;
+    background:#000000;
 }
 
-/* tablet breakpoint */
+.jj-btn{
+  text-align: center;
+	display: inline-block;
+  margin: 5px;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px ;
+  background-color: lightgray;
+  text-shadow: -1px -1px black, 1px 1px white;
+  color: gray;
+  box-shadow: 0 .2em gray; 
+  cursor: pointer;
+}
+.jj-btn:active {
+	box-shadow: none;
+	position: relative;
+	top: .2em;
+}
+
+/* tablet breakpoint
 @media (min-width:768px) {
     .grid {
         grid-template-columns: 1fr 1fr;
@@ -78,7 +96,7 @@ body{
             'left-sidebar right-sidebar'
             'footer footer';
     }
-}
+} */
 
 /* desktop breakpoint */
 @media (min-width:1024px) {
