@@ -7,6 +7,12 @@ body{
   background-color: #000000;
 
 }
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -77,7 +83,7 @@ body{
   background-color: lightgray;
   text-shadow: -1px -1px black, 1px 1px white;
   color: gray;
-  box-shadow: 0 .2em gray; 
+  box-shadow: 0 .2em gray;
   cursor: pointer;
 }
 .jj-btn:active {
@@ -85,7 +91,26 @@ body{
 	position: relative;
 	top: .2em;
 }
+.marquee{
+    overflow: hidden;
+    border:1px solid black;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+}
+p{
+    animation: scroll-left 10s linear infinite;
+}
 
+
+@keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 /* tablet breakpoint
 @media (min-width:768px) {
     .grid {
