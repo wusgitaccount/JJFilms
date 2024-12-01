@@ -4,7 +4,7 @@ body{
   overflow-x: hidden;
   color: white;
   margin: 0;
-  background-color: #000000;
+  background-color: red;
 
 }
 canvas {
@@ -20,7 +20,7 @@ canvas {
   width: 70%;
   overflow: hidden;
   position:relative;
-  margin-left: 15%;
+  margin-left: 0%;
 }
 
 /* grid container */
@@ -36,7 +36,7 @@ canvas {
 
 /* general column padding */
 .grid > * {
-    padding:1rem;
+    padding:1.5rem;
 }
 
 /* assign columns to grid areas */
@@ -93,10 +93,10 @@ canvas {
 }
 .marquee{
     overflow: hidden;
-    border:1px solid black;
     position: relative;
     white-space: nowrap;
     width: 100%;
+    background-color: red;
 }
 p{
     animation: scroll-left 10s linear infinite;
