@@ -5,6 +5,7 @@ body{
   color: white;
   margin: 0;
   background-color: red;
+  font-family: "VT323", serif;
 
 }
 canvas {
@@ -36,28 +37,34 @@ canvas {
 
 /* general column padding */
 .grid > * {
-    padding:1.5rem;
+    padding:1rem;
 }
 
 /* assign columns to grid areas */
 .grid > .header {
     grid-area:header;
     background:#000000;
-    height: 200px;
+    padding-bottom:0rem;
+
 }
 
 .grid > .main-content {
     grid-area:main-content;
     background:#000000;
+    padding-top:0rem;
 }
 .grid > .left-sidebar {
     grid-area:left-sidebar;
     background:#000000;
+    padding-top:0rem;
+
 }
 .left-sidebar img {
     width: 100%;
     object-fit: cover;
     overflow: hidden;
+    padding-top:0rem;
+
 }
 
 .grid > .right-sidebar {
@@ -72,24 +79,29 @@ canvas {
 .grid > .footer {
     grid-area:footer;
     background:#000000;
+    padding:0rem;
+}
+.footer img {
+    width: 100%;
+    overflow: hidden;
 }
 
 .jj-btn{
   text-align: center;
 	display: inline-block;
-  margin: 5px;
-  font-weight: bold;
-  padding: 10px 10px 10px 10px ;
+  font-size: 30px;
   background-color: lightgray;
-  text-shadow: -1px -1px black, 1px 1px white;
+  text-shadow: -.5px -.5px black, .5px .5px white;
   color: gray;
-  box-shadow: 0 .2em gray;
+  box-shadow: .1em .1em gray;
   cursor: pointer;
 }
 .jj-btn:active {
 	box-shadow: none;
 	position: relative;
 	top: .2em;
+  background-color: yellow;
+
 }
 .marquee{
     overflow: hidden;
@@ -97,9 +109,11 @@ canvas {
     white-space: nowrap;
     width: 100%;
     background-color: red;
+    height: 2rem;
+    line-height: 0em;
 }
 p{
-    animation: scroll-left 10s linear infinite;
+    animation: scroll-left 15s linear infinite;
 }
 
 
