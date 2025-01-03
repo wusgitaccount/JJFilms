@@ -116,6 +116,23 @@ p{
     animation: scroll-left 15s linear infinite;
 }
 
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: yellow;
+  text-decoration: none;
+}
 
 @keyframes scroll-left {
     0% {
