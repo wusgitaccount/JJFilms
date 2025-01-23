@@ -4,7 +4,6 @@ body{
   overflow-x: hidden;
   color: white;
   margin: 0;
-  background-color: red;
   font-family: "VT323", serif;
 
 }
@@ -18,13 +17,14 @@ canvas {
   box-sizing: border-box;
 }
 .jj-container{
-  width: 70%;
+  width: 100%;
   overflow: hidden;
   position:relative;
   margin-left: 0%;
 }
 
 /* grid container */
+
 .grid {
     display:grid;
     grid-template-areas:
@@ -45,7 +45,6 @@ canvas {
     grid-area:header;
     background:#000000;
     padding-bottom:0rem;
-
 }
 
 .grid > .main-content {
@@ -57,14 +56,12 @@ canvas {
     grid-area:left-sidebar;
     background:#000000;
     padding-top:0rem;
-
 }
 .left-sidebar img {
-    width: 100%;
+    width: 90%;
     object-fit: cover;
     overflow: hidden;
     padding-top:0rem;
-
 }
 
 .grid > .right-sidebar {
@@ -72,7 +69,7 @@ canvas {
     background:#000000;
 }
 .right-sidebar img {
-    width: 100%;
+    width: 90%;
     object-fit: cover;
     overflow: hidden;
 }
@@ -133,6 +130,9 @@ a:hover {
   background-color: yellow;
   text-decoration: none;
 }
+img {
+    cursor: pointer;
+}
 
 @keyframes scroll-left {
     0% {
@@ -142,25 +142,25 @@ a:hover {
       transform: translateX(-100%);
     }
   }
-/* tablet breakpoint
+tablet breakpoint
 @media (min-width:768px) {
     .grid {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             'header header'
             'main-content main-content'
-            'left-sidebar right-sidebar'
+            /*'left-sidebar right-sidebar'*/
             'footer footer';
     }
-} */
+}
 
 /* desktop breakpoint */
 @media (min-width:1024px) {
     .grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-template-areas:
-            'header header header header'
-            'left-sidebar main-content main-content right-sidebar'
-            'footer footer footer footer';
+            'header header header header header'
+            'left-sidebar main-content main-content main-content right-sidebar'
+            'footer footer footer footer footer';
     }
 }
