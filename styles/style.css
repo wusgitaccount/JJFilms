@@ -67,6 +67,12 @@ canvas {
     background:#000000;
     padding-bottom:0rem;
 }
+.header img {
+    max-width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    padding-top:0rem;
+}
 
 .grid > .main-content {
     grid-area:main-content;
@@ -79,7 +85,7 @@ canvas {
     padding-top:0rem;
 }
 .left-sidebar img {
-    width: 90%;
+    max-width: 100%;
     object-fit: cover;
     overflow: hidden;
     padding-top:0rem;
@@ -90,7 +96,7 @@ canvas {
     background:#000000;
 }
 .right-sidebar img {
-    width: 90%;
+    max-width: 100%;
     object-fit: cover;
     overflow: hidden;
 }
