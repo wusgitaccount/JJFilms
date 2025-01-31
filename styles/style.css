@@ -78,6 +78,7 @@ canvas {
     grid-area:main-content;
     background:#000000;
     padding-top:0rem;
+
 }
 .grid > .left-sidebar {
     grid-area:left-sidebar;
@@ -138,6 +139,23 @@ canvas {
 p{
     animation: scroll-left 15s linear infinite;
 }
+.photo-frame {
+  background-image: url('../assets/tv.png');
+  background-repeat: no-repeat;
+  background-size: 800px;
+  width: 800px;
+  height: 800px;
+  position: relative;
+
+  /* For demo */
+  margin: 0 auto;
+}
+#video {
+    position: absolute;
+    top: 140px;
+    left: 110px;
+}
+
 
 a:link {
   color: white;
