@@ -78,12 +78,15 @@ canvas {
     grid-area:main-content;
     background:#000000;
     padding-top:0rem;
+    width: 100%;
 
 }
 .grid > .left-sidebar {
     grid-area:left-sidebar;
     background:#000000;
     padding-top:0rem;
+    width: 100%;
+
 }
 .left-sidebar img {
     max-width: 100%;
@@ -95,6 +98,8 @@ canvas {
 .grid > .right-sidebar {
     grid-area:right-sidebar;
     background:#000000;
+    width: 100%;
+
 }
 .right-sidebar img {
     max-width: 100%;
@@ -142,8 +147,8 @@ p{
 .photo-frame {
   background-image: url('../assets/tv.png');
   background-repeat: no-repeat;
-  background-size: 800px;
-  width: 800px;
+  background-size: 100%;
+  max-width: 800px;
   height: 800px;
   position: relative;
 
@@ -152,8 +157,11 @@ p{
 }
 #video {
     position: absolute;
-    top: 140px;
-    left: 110px;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 55%;
+
 }
 
 
@@ -189,13 +197,14 @@ img {
 tablet breakpoint
 @media (min-width:768px) {
     .grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas:
-            'header header'
-            'main-content main-content'
-            /*'left-sidebar right-sidebar'*/
-            'footer footer';
+            'header '
+            'main-content'
+            'left-sidebar' 'right-sidebar'
+            'footer';
     }
+
 }
 
 /* desktop breakpoint */
