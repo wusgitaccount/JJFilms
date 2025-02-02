@@ -164,6 +164,37 @@ p{
 
 }
 
+.popup{
+  top: 20%;
+  right:0;
+  position: absolute;
+  width:200px;
+  overflow: hidden;
+  animation: 10s slide-left;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes slide-left {
+0% {
+  margin-right: -100%;
+}
+50% {
+  margin-right: 0%;
+}
+75% {
+  margin-right: 0%;
+}
+100% {
+  margin-right: -100%;
+}
+}
+
+.popup img{
+
+  width:100%;
+
+}
 
 a:link {
   color: white;
