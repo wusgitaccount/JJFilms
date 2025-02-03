@@ -18,12 +18,13 @@
         <header class="header">
 
           <a href="index.html">
-          <img src= "./assets/jj-logo.gif";>
-          </a> <img onclick="myFunction10()" src= "./assets/backshots.png";>
+          <img src= "./assets/jj-logo.gif";></a>
+
+           <img onclick="myFunction10()" src= "./assets/backshots.png";>
+
           <img id="startOrStopImg" src="./assets/music.gif" alt="Play Button">
           <audio id="audio" src="./assets/tempmusic.mp3" type="audio/mp3">
           </audio>
-
           <br>
 
           <span class='jj-btn'>about</span>
@@ -35,10 +36,36 @@
           </div>
         </header>
         <main class="main-content">
-          <div class="photo-frame">
-            <iframe id="video" width="570" height="420" src="https://www.youtube.com/embed/y6C-MAdXABI?si=FnjoMDftY8q1-2Q-" frameborder="0" allowfullscreen=""></iframe>
+
+          <div class="tab-content active" id="tab1">
+            <div class="photo-frame">
+              <iframe id="video" width="570" height="420" src="https://www.youtube.com/embed/8roLbxD5Zpo?si=3pTBy-Ox8vUG49C6" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+          </div>
+          <div class="tab-content" id="tab2">
+            <div class="photo-frame">
+              <iframe id="video" width="570" height="420" src="https://www.youtube.com/embed/y6C-MAdXABI?si=FnjoMDftY8q1-2Q-" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+          </div>
+          <div class="tab-content" id="tab3">
+            <div class="photo-frame">
+              <iframe id="video" width="570" height="420" src="https://www.youtube.com/embed/ICRTWlAsqSE?si=iyjyWI6eRNBbISEA" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+          </div>
+          <div class="tab-content" id="tab4">
+            <div class="photo-frame">
+              <iframe id="video" width="570" height="420" src="https://www.youtube.com/embed/_wVsH5doyNY?si=IPHCdZmM4joENnOB" frameborder="0" allowfullscreen=""></iframe>
+            </div>
           </div>
 
+
+          <div class="tab-buttons">
+           <button class="tab-button active" data-tab="tab1">Flow - Dance Film</button>
+           <button class="tab-button" data-tab="tab2">Wrath - Experimental Short Film</button>
+           <button class="tab-button" data-tab="tab3">Lust - Experimental Short Film</button>
+           <button class="tab-button" data-tab="tab4">DingSPY - Short Film</button>
+         </div>
+<br><br>
           <iframe src="https://www3.cbox.ws/box/?boxid=3540841&boxtag=bE381L" width="30%" height="350" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
 
 <!--<iframe src="https://www.onlinegames.io/games/2023/unity2/gta-simulator/index.html
@@ -119,9 +146,25 @@ function myFunction10() {
 function myFunction11() {
   window.open("https://ig.me/m/dingfly.lu", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=8,left=50,width=500,height=700");
 }
+
 </script>
 
+<script>
+  const buttons = document.querySelectorAll(".tab-button");
+  const contents = document.querySelectorAll(".tab-content");
 
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Remove active class from all buttons and contents
+      buttons.forEach(btn => btn.classList.remove("active"));
+      contents.forEach(content => content.classList.remove("active"));
+
+      // Add active class to the clicked button and corresponding content
+      button.classList.add("active");
+      document.getElementById(button.dataset.tab).classList.add("active");
+    });
+  });
+</script>
 
 
 </body>

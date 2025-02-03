@@ -66,6 +66,7 @@ canvas {
     grid-area:header;
     background:#000000;
     padding-bottom:0rem;
+    width: 100%;
 }
 .header img {
     max-width: 100%;
@@ -247,4 +248,20 @@ tablet breakpoint
             'left-sidebar main-content main-content main-content right-sidebar'
             'footer footer footer footer footer';
     }
+}
+
+.tab-buttons button.active {
+      background-color: #007bff;
+      color: white;
+      border-color: #007bff;
+}
+
+/* Tab content */
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
 }
