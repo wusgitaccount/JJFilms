@@ -1,9 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=VT323);
 
 body{
-  overflow-x: hidden;
-  color: white;
-  margin: 0;
   font-family: "VT323", serif;
 
 }
@@ -265,3 +262,39 @@ tablet breakpoint
 .tab-content.active {
   display: block;
 }
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.h-container {
+display: flex;
+height: 100vh;
+}
+
+  /* Sidebar styling */
+  #sidebar {
+    background-color: #f4f4f4;
+    width: 15%;
+    min-width: 150px;
+    max-width: 50%;
+    padding: 1em;
+    overflow: auto;
+  }
+
+  /* Divider styling */
+  #divider {
+    width: 5px;
+    background-color: #ddd;
+    cursor: ew-resize;
+  }
+
+  /* Main content styling */
+  #content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 1em;
+  }

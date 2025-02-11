@@ -1,0 +1,50 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JJ Farry</title>
+  <meta name="viewport" content="initial-scale=1">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="icon" type="image/x-icon" href="./assets/.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="h-container">
+    <div id="sidebar">Sidebar Menu Content</div>
+    <div id="divider"></div>
+    <div id="content">Main Content Area</div>
+  </div>
+  <script>
+    const divider = document.getElementById('divider');
+    const sidebar = document.getElementById('sidebar');
+
+    let isResizing = false;
+
+    divider.addEventListener('mousedown', (e) => {
+      isResizing = true;
+      document.body.style.cursor = 'ew-resize';
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isResizing) return;
+
+      // Calculate new width for the sidebar
+      const newWidth = e.clientX;
+
+      // Set limits for resizing
+      const minWidth = 150;
+      const maxWidth = window.innerWidth * 0.5;
+
+      if (newWidth >= minWidth && newWidth <= maxWidth) {
+        sidebar.style.width = `${newWidth}px`;
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      isResizing = false;
+      document.body.style.cursor = 'default';
+    });
+  </script>
+</body>
+
+</html>
