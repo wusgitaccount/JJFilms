@@ -1,6 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=VT323);
 
 body{
+  overflow-x: hidden;
+  color: white;
+  margin: 0;
   font-family: "VT323", serif;
 
 }
@@ -136,8 +139,8 @@ canvas {
     white-space: nowrap;
     width: 100%;
     background-color: red;
-    height: 2rem;
-    line-height: 0em;
+    height: 1rem;
+    line-height: 1em;
 }
 p{
     animation: scroll-left 15s linear infinite;
@@ -270,11 +273,11 @@ tablet breakpoint
     box-sizing: border-box;
   }
 
-.h-container {
-display: flex;
-height: 100vh;
-}
 
+  .h-container {
+    display: flex;
+  height: 100vh;
+  }
   /* Sidebar styling */
   #sidebar {
     background-color: #f4f4f4;
