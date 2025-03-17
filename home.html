@@ -2,49 +2,227 @@
 <head>
   <meta charset="utf-8">
   <title>JJ Farry</title>
-  <meta name="viewport" content="initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="icon" type="image/x-icon" href="./assets/.jpg">
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <div class="h-container">
-    <div id="sidebar">Sidebar Menu Content</div>
-    <div id="divider"></div>
-    <div id="content">Main Content Area</div>
+<body ondblclick="document.getElementById('sidebar').classList.toggle('active')">
+
+<div class="container-main">
+  <div id="sidebar">
+  Sidebar Content
+</div>
+<div id="divider"></div>
+<div id="content">
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="#">Wings of Desire, 2025</a>
+    </div>
+    <div class="hover-bg">
+      <img src= "./assets/wings_of_desire.jpg">
+    </div>
   </div>
-  <script>
-    const divider = document.getElementById('divider');
-    const sidebar = document.getElementById('sidebar');
 
-    let isResizing = false;
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="#">Flow, 2025</a>
+    </div>
+    <div class="hover-bg">
+      <img src= "./assets/wings_of_desire.jpg">
+    </div>
+  </div>
 
-    divider.addEventListener('mousedown', (e) => {
-      isResizing = true;
-      document.body.style.cursor = 'ew-resize';
-    });
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="#">Sins Anthology, 2024-</a>
+    </div>
+    <div class="hover-bg">
+      <img src= "./assets/wings_of_desire.jpg">
+    </div>
+  </div>
 
-    document.addEventListener('mousemove', (e) => {
-      if (!isResizing) return;
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="#">Administration, 2024</a>
+    </div>
+    <div class="hover-bg">
+      <img src= "./assets/wings_of_desire.jpg">
+    </div>
+  </div>
 
-      // Calculate new width for the sidebar
-      const newWidth = e.clientX;
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="#">DingSpy - Full, 2024</a>
+    </div>
+    <div class="hover-bg">
+      <img src= "./assets/wings_of_desire.jpg">
+    </div>
+  </div>
 
-      // Set limits for resizing
-      const minWidth = 150;
-      const maxWidth = window.innerWidth * 0.5;
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="#">Docile, 2024</a>
+    </div>
+    <div class="hover-bg">
+      <img src= "./assets/wings_of_desire.jpg">
+    </div>
+  </div>
 
-      if (newWidth >= minWidth && newWidth <= maxWidth) {
-        sidebar.style.width = `${newWidth}px`;
-      }
-    });
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="#">Entropy, 2024</a>
+    </div>
+    <div class="hover-bg">
+      <img src= "./assets/wings_of_desire.jpg">
+    </div>
+  </div>
 
-    document.addEventListener('mouseup', () => {
-      isResizing = false;
-      document.body.style.cursor = 'default';
-    });
-  </script>
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="#">Focus, 2024</a>
+    </div>
+    <div class="hover-bg">
+      <img src= "./assets/wings_of_desire.jpg">
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="#">Good Luck Boonmee, 2024</a>
+    </div>
+    <div class="hover-bg">
+      <img src= "./assets/wings_of_desire.jpg">
+    </div>
+  </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="#">Metamorphosis, 2024</a>
+      </div>
+      <div class="hover-bg">
+        <img src= "./assets/wings_of_desire.jpg">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="#">Revenant, 2024</a>
+      </div>
+      <div class="hover-bg">
+        <img src= "./assets/wings_of_desire.jpg">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="#">What I Love - Music Video, 2024</a>
+      </div>
+      <div class="hover-bg">
+        <img src= "./assets/wings_of_desire.jpg">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="#">A Homage to La Haine, 2024</a>
+      </div>
+      <div class="hover-bg">
+        <img src= "./assets/wings_of_desire.jpg">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="#">A Homage to La Haine, 2023</a>
+      </div>
+      <div class="hover-bg">
+        <img src= "./assets/wings_of_desire.jpg">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="#">DingSpy - Teasers, 2023</a>
+      </div>
+      <div class="hover-bg">
+        <img src= "./assets/wings_of_desire.jpg">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="#">GloBros, 2023</a>
+      </div>
+      <div class="hover-bg">
+        <img src= "./assets/wings_of_desire.jpg">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="#">aCLICKtion, 2022</a>
+      </div>
+      <div class="hover-bg">
+        <img src= "./assets/wings_of_desire.jpg">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="#">Castle Doctrine, 2022</a>
+      </div>
+      <div class="hover-bg">
+        <img src= "./assets/wings_of_desire.jpg">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="#">Cerebral Retrogression, 2022</a>
+      </div>
+      <div class="hover-bg">
+        <img src= "./assets/wings_of_desire.jpg">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="#">Cerebral Retrogression, 2022</a>
+      </div>
+      <div class="hover-bg">
+        <img src= "./assets/wings_of_desire.jpg">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="#">Poison, 2022</a>
+      </div>
+      <div class="hover-bg">
+        <img src= "./assets/wings_of_desire.jpg">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="#">Temporary, 2022</a>
+      </div>
+      <div class="hover-bg">
+        <img src= "./assets/wings_of_desire.jpg">
+      </div>
+    </div>
+
+</div>
+</div>
+
+
+  <script src="script.js"></script>
+
 </body>
+</html>
+
 
 </html>
