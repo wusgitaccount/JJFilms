@@ -4,6 +4,8 @@ body{
   overflow-x: hidden;
   color: white;
   margin: 0;
+  background-color: 000000;
+
 
 }
 
@@ -120,7 +122,7 @@ body{
     height: 1rem;
     line-height: 1em;
 }
-p{
+.marquee p{
     animation: scroll-left 15s linear infinite;
 }
 .photo-frame {
@@ -245,28 +247,30 @@ tablet breakpoint
 .container-main{
   display: flex;
   height: 100vh;
-
 }
-#sidebar {
-  width: 0;
-  min-width: 0;
-  max-width: 50%;
-  background:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(68,57,57,1) 67%, rgba(0,0,0,1) 100%);
-  padding: 1em;
+
+.collapsible {
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+
+  position: fixed;
+}
+.active, .collapsible:hover {
+}
+
+.about {
+  padding: 0 20px;
+  max-height: 0;
   overflow: hidden;
-  white-space: nowrap;
-  transition: width 0.3s ease-in-out;
+  transition: max-height 0.2s ease-out;
+  position: absolute;
+
 }
 
-#sidebar.active {
-  width: 50%;
-  min-width: 150px;
-}
-#divider {
-  width: 5px;
-  background:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(68,57,57,1) 67%, rgba(0,0,0,1) 100%);
-  cursor: ew-resize;
-}
 #content {
     flex-grow: 1;
     overflow-x: auto;
@@ -274,6 +278,7 @@ tablet breakpoint
     display: flex;
     align-items: center;
     padding: 20px;
+
 }
 
 .timeline {
@@ -292,7 +297,7 @@ tablet breakpoint
   font-size: 16px;
   border-radius: 10px;
   text-align: center;
-  transition: background 0.3s;
+  transition: background 0.5s;
   cursor: pointer;
 }
 
