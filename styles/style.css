@@ -339,7 +339,7 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
     height: 100vh;
 }
 
-.hover-bg img {
+.hover-bg video {
     min-width: 100vw !important;
     min-height: 100vh !important;
     width: auto !important;
