@@ -247,20 +247,7 @@ tablet breakpoint
 .container-main{
   display: flex;
   height: 100vh;
-}
-
-.collapsible {
-  color: white;
-  cursor: pointer;
-  padding: 20px;
-  border: none;
-  text-align: center;
-  font-size: 15px;
-  top: 0;
-  width: 100vw;
-  position: fixed;
-}
-.active, .collapsible:hover {
+  overflow-y: hidden;
 }
 
 .about {
@@ -279,6 +266,7 @@ tablet breakpoint
     display: flex;
     align-items: center;
     padding: 20px;
+    overflow-y: hidden;
 
 }
 
@@ -303,6 +291,7 @@ tablet breakpoint
   cursor: pointer;
 
 }
+
 .timeline-item img {
   width: 100%;
   height: 100%;
@@ -339,6 +328,8 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
     height: 100vh;
 }
 
+
+
 .hover-bg video {
     min-width: 100vw !important;
     min-height: 100vh !important;
@@ -366,8 +357,32 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
 
    #read-more {
      cursor: pointer;
-     background: #bbb;
-     padding: 5px 10px;
-     border: none;
-     margin-top: 10px;
+     border-radius: 5px;
+     border: 2px white;
+     border-radius: 5px;
+     color: white;
+     font-family: "Times New Roman", Times, serif;
+     background-color: inherit;
+
+
+   }
+   .tooltiptext {
+     visibility: hidden;
+     background-color: black;
+     color: #fff;
+     text-align: center;
+     padding: 5px 0;
+     font-size: 10px;
+
+     /* Position the tooltip */
+     position: absolute;
+     z-index: 1;
+     top: 95%;
+     left: 50%;
+     overflow: hidden;
+
+   }
+
+   .timeline-item:hover .tooltiptext {
+     visibility: visible;
    }
