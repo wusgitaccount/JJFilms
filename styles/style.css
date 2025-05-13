@@ -289,7 +289,7 @@ tablet breakpoint
   transition: transform .2s;
   transition: background 0.5s;
   cursor: pointer;
-
+  opacity: 0.5;
 }
 
 .timeline-item img {
@@ -299,6 +299,9 @@ tablet breakpoint
 }
 .timeline-item:hover  {
     transform: scale(1.5);
+    opacity: 1;
+    z-index:999;
+
 }
 
 .hover-bg {
