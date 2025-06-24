@@ -267,7 +267,6 @@ tablet breakpoint
     align-items: center;
     padding: 20px;
     overflow-y: hidden;
-
 }
 
 .timeline {
@@ -279,7 +278,6 @@ tablet breakpoint
   flex: 0 0 auto;
   width: 250px;
   height: 150px;
-  background-color: #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -301,7 +299,6 @@ tablet breakpoint
     transform: scale(1.5);
     opacity: 1;
     z-index:999;
-
 }
 
 .hover-bg {
@@ -313,7 +310,6 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
     pointer-events: none;
 
 }
-
 
 .hover-bg {
     display: flex;
@@ -359,6 +355,9 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
    }
 
    #read-more {
+     width: 100%;
+     text-align: left;
+     font-size: 14px;
      cursor: pointer;
      border-radius: 5px;
      border: 2px white;
@@ -366,9 +365,8 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
      color: white;
      font-family: "Times New Roman", Times, serif;
      background-color: inherit;
-
-
    }
+
    .tooltiptext {
      visibility: hidden;
      background-color: black;
