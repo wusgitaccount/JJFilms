@@ -1,0 +1,66 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JJ Farry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="icon" type="image/x-icon" href="./assets/.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+
+<body ondblclick="document.getElementById('sidebar').classList.toggle('active')">
+
+<div class="container-main">
+
+
+  <div id="about">
+    <button id="read-more" onclick="document.getElementById('about').classList.toggle('expanded')">
+    <p>
+    JJ Farry is a video maker based in Tamaki Makaurau, specialising in cinematography and colour grading. Primarily making experimental short films, he prides himself on his story telling and world building abilities...
+<br>
+<br><br>
+<i>I hope u fuck with my shit frski.</i>
+<br>
+Dm me on instagram <u><a href="https://www.instagram.com/jj.farry">@jj.farry</a></u>
+  <br><br>
+</button>
+    </p>
+
+    <a href="index.html"><img width="30px" src= "./assets/door.gif"></a>
+
+<div id="grad"></div>
+  </div>
+
+<div class="panel-container-vertical">
+
+    <div class="panel-top">
+       <div class="videoWrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sLANiUQF11k?si=kGeOVx9WF465wI6Pmodestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+    </div>
+
+    <div class="splitter-horizontal">
+    </div>
+
+    <div class="panel-bottom">
+       <p> An homage to Wim Wenders’ ‘Wings of Desire’ (1986).</p>
+    </div>
+</div>
+
+</div>
+<script src="./script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://rawgit.com/RickStrahl/jquery-resizable/master/src/jquery-resizable.js"></script>
+<script> 
+$(".panel-top").resizable({
+   handleSelector: ".splitter-horizontal",
+   resizeWidth: false
+ });
+ </script>
+
+</body>
+</html>
+
+
+</html>
