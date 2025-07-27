@@ -22,6 +22,7 @@ body{
   position:relative;
   margin-left: 0%;
   font-family: "VT323", serif;
+  
 }
 
 /* grid container */
@@ -209,9 +210,10 @@ a:visited {
   color: red;
   background-color: yellow;
   text-decoration: none;
+  cursor: url("../assets/cursor.png"), auto;
 }
 .jj-container img {
-    cursor: pointer;
+   cursor: url("../assets/cursor.png"), auto;
 }
 .tab-buttons button.active {
       background-color: #007bff;
