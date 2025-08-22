@@ -275,7 +275,10 @@ a:visited {
   transition: max-height 0.2s ease-out;
   position: absolute;
 }
-
+.about a:hover {
+  text-shadow: 2px 2px 10px #ffffff;
+  filter: dropshadow(color=#ffffff, offx=2, offy=2);
+}
 #content {
     flex-grow: 1;
     overflow-x: auto;
