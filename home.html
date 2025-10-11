@@ -241,9 +241,9 @@
 
     <div class="timeline">
       <div class="timeline-item">
-        <a href="https://youtu.be/5OVxCEuYrEI?si=gsqJ7AmfTib3zZI5" target="_blank">
+        <a href="boys-on-the-4king.html" target="_blank">
         <img src= "./assets/la_haine.jpg">
-        <span class="tooltiptext"> A Homage to La Haine (2023)</span>
+        <span class="tooltiptext"> An Homage to La Haine (2023)</span>
         </a>
       </div>
 
@@ -256,7 +256,7 @@
 
     <div class="timeline">
       <div class="timeline-item">
-        <a href="https://www.instagram.com/p/C0Z0U3jyoR9/" target="_blank">
+        <a href="dingspy-teaser.html" target="_blank">
         <img src= "./assets/DingSpy_Teaser1.png">
         <span class="tooltiptext"> DingSpy Teaser (2023)</span>
         </a>
@@ -269,7 +269,7 @@
 
     <div class="timeline">
       <div class="timeline-item">
-        <a href="https://www.instagram.com/p/CvdRB12yXn1/" target="_blank">
+        <a href="globros.html" target="_blank">
         <img src= "./assets/GloBros.png">
         <span class="tooltiptext"> GloBros (2023)</span>
         </a>
@@ -284,7 +284,7 @@
 
     <div class="timeline">
       <div class="timeline-item">
-        <a href="https://youtu.be/ftnlg58pKHE?si=lBuITkBceLZmWEWO" target="_blank">
+        <a href="poison.html" target="_blank">
         <img src= "./assets/Poison.png">
         <span class="tooltiptext"> Poison (2023)</span>
         </a>
@@ -299,7 +299,7 @@
 
     <div class="timeline">
       <div class="timeline-item">
-        <a href="https://youtu.be/sNGkq5P4ZVs?si=yG29hhZ-BfyC6WO-" target="_blank">   
+        <a href="aclicktion.html" target="_blank">   
         <img src= "./assets/aclicktion.png">
         <span class="tooltiptext"> Aclicktion (2022)</span>
         </a>
@@ -314,7 +314,7 @@
 
     <div class="timeline">
       <div class="timeline-item">
-        <a href="https://www.youtube.com/watch?v=B_KVAfzudL8" target="_blank">
+        <a href="castle-doctrine.html" target="_blank">
         <img src= "./assets/Castle_Doctrine.png">
         <span class="tooltiptext"> Castle Doctrine (2022)</span>
         </a>
@@ -329,7 +329,7 @@
 
     <div class="timeline">
       <div class="timeline-item">
-        <a href="https://youtu.be/0FimEYtCUB0?si=L-bP7uxJ3K4G_k_O" target="_blank">
+        <a href="temporary.html" target="_blank">
         <img src= "./assets/Temporary.png">
         <span class="tooltiptext">
           Temporary (2022)
@@ -346,7 +346,7 @@
 
     <div class="timeline">
       <div class="timeline-item">
-        <a href="https://youtu.be/ujxe4rU0hqM?si=JKQwLXOlqOePDRel" target="_blank">
+        <a href="any-other-day.html" target="_blank">
         <img src= "./assets/AnyOtherDay.png">
         <span class="tooltiptext"> Any Other Day (2022)</span>
         </a>
@@ -361,7 +361,7 @@
 
     <div class="timeline">
       <div class="timeline-item">
-        <a href="https://youtu.be/ibGZqkHVApU?si=RRuny12PlVXQ9rnW" target="_blank">
+        <a href="cerebral-retrogression.html" target="_blank">
         <img src= "./assets/cerebral_retrogression.png">
         <span class="tooltiptext"> Cerebral Retrogression (2022)</span>
         </a>
@@ -376,7 +376,7 @@
 
     <div class="timeline">
       <div class="timeline-item">
-        <a href="https://youtu.be/6k_CYYFepag?si=0PVXXh9ME2OhbuCl" target="_blank">
+        <a href="catharsis.html" target="_blank">
         <img src= "./assets/Catharsis.png">
         <span class="tooltiptext"> Catharsis (2021)</span>
         </a>
@@ -396,6 +396,38 @@
   <script src="./script.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="/js/jquery.mousewheel.js"></script>
+
+<script>
+  const slider = document.getElementById('content');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // scroll-fastness multiplier
+    slider.scrollLeft = scrollLeft - walk;
+  });
+</script>
 
 </body>
 </html>
