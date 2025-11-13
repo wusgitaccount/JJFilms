@@ -1,173 +1,479 @@
-<!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>JJFilms.xyz</title>
-  <meta name="viewport" content="initial-scale=1">
+  <title>JJ Farry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="icon" type="image/x-icon" href="./assets/cursor.png">
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body ondblclick="document.getElementById('sidebar').classList.toggle('active')">
 
+<div class="container-main">
 
-  <div class="jj-container">
-    <div class="grid">
-        <header class="header">
+  <div id="about">
+    <button id="read-more" onclick="document.getElementById('about').classList.toggle('expanded')">
+    <p> <a href="#">JJ Farry</a> is a video maker based in Tamaki Makaurau, specialising in cinematography and colour grading. 
+        Primarily making experimental short films, he prides himself on his story telling and world building abilities...
+        <br><br><br>
+        <i>I hope u fuck with my shit frski.</i>
+        <br>
+        Dm me on instagram <u><a href="https://www.instagram.com/jj.farry">@jj.farry</a></u>
+        <br><br>
+        </button>
+    </p>
+    <a href="portal.html"><img width="30px" src= "./assets/door.gif"></a>
+    <div id="grad"></div>
+  </div>
 
-          <a href="index.html">
-          <img src= "./assets/jj-logo.gif";></a>
+  <div id="content">
 
-           <img onclick="myFunction10()" src= "./assets/backshots.png";>
-
-          <img id="startOrStopImg" src="./assets/music.gif" alt="Play Button">
-          <audio id="audio" src="./assets/tempmusic.mp3" type="audio/mp3">
-          </audio>
-          <br>
-
-          <span class='jj-btn'><a href="home.html">filmography</a></span>
-                     <br><br>
-
-          <div class="marquee">
-                <p>jjfilms.xyz looks better on desktop...this site is under construction</p>
-          </div>
-        </header>
-        <main class="main-content">
-
-          <div class="tab-content active" id="tab1">
-            <div class="photo-frame">
-              <iframe id="video" width="570" height="420" src="https://www.youtube.com/embed/RsIMBoYCjoo?si=V9zu5VHBNSnn4jKC" frameborder="0" allowfullscreen=""></iframe>
-            </div>
-          </div>
-
-          <div class="tab-content" id="tab2">
-            <div class="photo-frame">
-              <iframe id="video" width="570" height="420" src="https://www.youtube.com/embed/8a3o0B6hKcY?si=MzxdeY6ndWp6kpVY" frameborder="0" allowfullscreen=""></iframe>
-            </div>
-          </div>
-
-          <div class="tab-content" id="tab3">
-            <div class="photo-frame">
-              <iframe id="video" width="570" height="420" src="https://www.youtube.com/embed/iVcBV_IZvpg?si=ucdq8-_cSsPqFa9A" frameborder="0" allowfullscreen=""></iframe>
-            </div>
-          </div>
-
-          <div class="tab-content" id="tab4">
-            <div class="photo-frame">
-              <iframe id="video" width="570" height="420" src="https://www.onlinegames.io/games/2023/unity2/gta-simulator/index.html" frameborder="0" allowfullscreen=""></iframe>
-            </div>
-          </div>
-
-          <div class="tab-buttons">
-          <button class="tab-button active" data-tab="tab1">Marvel select venom figure review</button>
-           <button class="tab-button" data-tab="tab2">Picific Rim movie review</button>
-           <button class="tab-button" data-tab="tab3">they don't really care about us.</button>
-           <button class="tab-button" data-tab="tab4"> (•̀ᴗ•́ )و </button>
-         </div>
-<br><br>
-          <a href="home.html"><img src= "./assets/footer.png"></a><br>
-
-        </main>
-
-        <section class="left-sidebar">
-        <a href="https://www.youtube.com/@jjfarry">  ⚡ youtube </a><br>
-        <a href="https://www.instagram.com/jj.farry/">  ⚡ instagram </a><br>
-        <a href="mailto:johnfarry26@gmail.com">  ⚡ email </a><br>
-        <a href="https://www.instagram.com/backshotz.mp3/">  ⚡ onlyfans </a>
-<br><br>
-          <iframe src="https://www3.cbox.ws/box/?boxid=3540841&boxtag=bE381L" width="100%" height="350" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
-
-            <img onclick="myFunction3()" src= "./assets/taona.png";> <br><br>
-            <img onclick="myFunction4()" src= "./assets/view done.png";> <br><br>
-            <img onclick="myFunction5()" src= "./assets/zee.png";> <br><br>
-            
-
-
-        </section>
-        <aside class="right-sidebar">
-        <!--  <img src="./assets/new.gif">
-          <img onclick="myFunction2()" src= "./assets/GLB_promo.gif"> <br>
-           -->
-           <img onclick="myFunction6()" src= "./assets/ariki.png";> 
-           <!--<img onclick="myFunction7()" src= "./assets/di square gif.gif";> -->
-           <br><br>
-            <img onclick="myFunction1()" src= "./assets/JJ_ad2.png";> <br><br>
-            <img onclick="myFunction8()" src= "./assets/noelle.png";> <br><br>
-            <img onclick="myFunction9()" src= "./assets/caleb.png";>
-        </aside>
-        <footer class="footer">
-          <img src= "./assets/JJ-fire.gif";><img src= "./assets/JJ-fire.gif";><img src= "./assets/JJ-fire.gif";><img src= "./assets/JJ-fire.gif";><img src= "./assets/JJ-fire.gif";><img src= "./assets/JJ-fire.gif";>
-
-          <div style="display: inline-flex; text-align: center; justify-content: center; align-items: center; line-height: 100%; padding: 3.3px; font-size: 9px; font-style: italic; object-fit: contain; color: white; text-shadow: blue 0px 1px 4px;">
-           <img src="./assets/heart.gif" style="max-height: 20px;">
-          <marquee scrollamount="4" direction="left">if you knew me, would you click me? this site was madde with love by <a href="https://sophiawu.nz"> sophiawu.nz</a>, <a href="https://www.instagram.com/99s_____w_/">99s_____w_</a>
-           </marquee><br>
-          <img src="./assets/heart.gif" style="max-height: 20px;">
-        </div>
-        </footer>
-
+    <div class="timeline">
+      <div class="timeline-item" data-caption="Ars Moriendi (2025)">
+        <a href="ars-moriendi.html">
+        <img src="./assets/ars_moriendi.png">
+        <span class="tooltiptext">Ars Moriendi (2025)</span>    
+      </a>
       </div>
-      <div class="popup">
-        <img onclick="myFunction11()" src= "./assets/JJ_ad3.jpg";> <br><br>
+
+    <div class="hover-bg">
+      <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <source src="./assets/ars_moriendi.mp4" type="video/mp4">
+      </video>
+    </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item" data-caption="Assimilation (2025)">
+        <a href="assimilation.html">
+        <img src="./assets/assimilation.png">
+        <span class="tooltiptext">Assimilation (2025)</span>    
+      </a>
+    </div>
+
+    <div class="hover-bg">
+      <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <source src="./assets/assimilation.mp4" type="video/mp4">
+      </video>
+    </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item" data-caption="Sloth (2025)">
+        <a href="sloth.html">
+        <img src="./assets/sloth.png">
+        <span class="tooltiptext">Sloth (2025)</span>    
+      </a>
+    </div>
+
+    <div class="hover-bg">
+      <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <source src="./assets/sloth.mp4" type="video/mp4">
+      </video>
+    </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item" data-caption="Wings of Desire (2025)">
+        <a href="wings-of-desire.html">
+        <img src="./assets/wings_of_desire.jpg">
+        <span class="tooltiptext">Wings of Desire (2025)</span>    
+      </a>
+    </div>
+
+    <div class="hover-bg">
+      <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <source src="./assets/wings_of_desire.mp4" type="video/mp4">
+      </video>
+    </div>
+    </div>
+
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="good-luck-boonmee.html">
+      <img src= "./assets/good_luck_boonmee.png">
+      <span class="tooltiptext">Good Luck Boonmee (2025)</span>
+      </a>
+    </div>
+
+    <div class="hover-bg">
+      <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <source src="./assets/goodluckboonmee.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="flow.html">
+      <img src= "./assets/flow.png">
+      <span class="tooltiptext">Flow (2025)</span>
+      </a>
+    </div>
+
+    <div class="hover-bg">
+      <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <source src="./assets/flow.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="administration.html">
+      <img src= "./assets/Administration.png">
+      <span class="tooltiptext">Administration (2024)</span>
+      </a>
+    </div>
+    
+    <div class="hover-bg">
+      <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <source src="./assets/administration.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="metamorphosis.html">
+        <img src= "./assets/metamorphosis.png">
+        <span class="tooltiptext"> Metamorphosis (2024)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/metamorphosis.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
 
-        <script src="./script.js"></script>
-        <script>
-function myFunction1() {
-  window.open("https://www.instagram.com/dingfly.art/", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=300,left=700,width=350,height=500");
-}
-function myFunction2() {
-  window.open("https://www.instagram.com/p/DBp3lyFyh_s/?img_index=1", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=250,left=100,width=800,height=600");
-}
-function myFunction3() {
-  window.open("https://www.instagram.com/taonaishe_/", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=350,height=500");
-}
-function myFunction4() {
-  window.open("https://www.instagram.com/varit_k/", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=900,width=350,height=500");
-}
-function myFunction5() {
-  window.open("https://www.instagram.com/qqpassionfruitgreentea/", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=300,left=950,width=350,height=500");
-}
-function myFunction6() {
-  window.open("./assets/error.gif", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=250,left=500,width=600%,height=600%");
-}
-function myFunction7() {
-  window.open("https://www.instagram.com/nimaastria/", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=10,left=600,width=350,height=500");
-}
-function myFunction8() {
-  window.open("https://www.instagram.com/777images/", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=150,left=900,width=350,height=500");
-}
-function myFunction9() {
-  window.open("https://www.instagram.com/calebtaulapiu_/", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=390,left=650,width=350,height=500");
-}
-function myFunction10() {
-  window.open("https://www.instagram.com/p/DBcYmzhTShQ/?img_index=1", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=8,left=50,width=500,height=700");
-}
-function myFunction11() {
-  window.open("https://ig.me/m/dingfly.lu", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=8,left=50,width=500,height=700");
-}
+    <div class="timeline">
+    <div class="timeline-item">
+      <a href="docile.html">
+      <img src= "./assets/docile.jpg">
+      <span class="tooltiptext">Docile(2024)</span>
+      </a>
+    </div>
 
-</script>
+    <div class="hover-bg">
+      <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <source src="./assets/docile.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="wrath.html">
+        <img src= "./assets/wrath.png">
+        <span class="tooltiptext"> Wrath (2024)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/wrath.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="revenant.html">
+        <img src= "./assets/revenant.png">
+        <span class="tooltiptext"> Revenant (2024)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/revenant.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="lust.html">
+        <img src= "./assets/Lust.png">
+        <span class="tooltiptext"> Lust (2024)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/lust.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="pride.html">
+      <img src="./assets/pride.jpg">
+      <span class="tooltiptext">Pride (2024)</span>
+      </a>
+    </div>
+
+    <div class="hover-bg">
+      <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <source src="./assets/pride.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="entropy.html">
+      <img src= "./assets/entropy.jpg">
+      <span class="tooltiptext">Entropy (2024)</span>
+      </a>
+    </div>
+
+    <div class="hover-bg">
+      <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <source src="./assets/entropy.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="what-i-love.html">
+        <img src= "./assets/what_i_love.png">
+        <span class="tooltiptext"> What I Love (2024)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/whatilove.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="focus.html">
+        <img src= "./assets/focus.png">
+        <span class="tooltiptext">Focus (2024)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/focus.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <a href="dingspy.html">
+      <img src= "./assets/dingspy.png">
+      <span class="tooltiptext">DingSpy (2024)</span>
+      </a>
+    </div>
+
+    <div class="hover-bg">
+      <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+        <source src="./assets/dingspy.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="boys-on-the-4king.html">
+        <img src= "./assets/la_haine.jpg">
+        <span class="tooltiptext"> An Homage to La Haine (2023)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/la_haine.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="dingspy-teaser.html">
+        <img src= "./assets/DingSpy_Teaser1.png">
+        <span class="tooltiptext"> DingSpy Teaser (2023)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <img src= "./assets/DingSpy_Teaser2.png">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="globros.html">
+        <img src= "./assets/GloBros.png">
+        <span class="tooltiptext"> GloBros (2023)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/globros.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="poison.html">
+        <img src= "./assets/Poison.png">
+        <span class="tooltiptext"> Poison (2023)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/poison.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="temporary.html">
+        <img src= "./assets/Temporary.png">
+        <span class="tooltiptext">
+          Temporary (2022)
+        </span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/temporary.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="any-other-day.html">
+        <img src= "./assets/AnyOtherDay.png">
+        <span class="tooltiptext"> Any Other Day (2022)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/anyotherday.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+        <div class="timeline">
+      <div class="timeline-item">
+        <a href="cerebral-retrogression.html">
+        <img src= "./assets/cerebral_retrogression.png">
+        <span class="tooltiptext"> Cerebral Retrogression (2022)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/cerebral_retrogression.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="aclicktion.html">   
+        <img src= "./assets/aclicktion.png">
+        <span class="tooltiptext"> aCLICKtion (2022)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/aclicktion.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="castle-doctrine.html">
+        <img src= "./assets/Castle_Doctrine.png">
+        <span class="tooltiptext"> Castle Doctrine (2022)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/castle.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <a href="catharsis.html">
+        <img src= "./assets/Catharsis.png">
+        <span class="tooltiptext"> Catharsis (2021)</span>
+        </a>
+      </div>
+
+      <div class="hover-bg">
+        <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/catharsis.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+  <script src="./script.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/js/jquery.mousewheel.js"></script>
 
 <script>
-  const buttons = document.querySelectorAll(".tab-button");
-  const contents = document.querySelectorAll(".tab-content");
+  const slider = document.getElementById('content');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
 
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      // Remove active class from all buttons and contents
-      buttons.forEach(btn => btn.classList.remove("active"));
-      contents.forEach(content => content.classList.remove("active"));
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
 
-      // Add active class to the clicked button and corresponding content
-      button.classList.add("active");
-      document.getElementById(button.dataset.tab).classList.add("active");
-    });
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // scroll-fastness multiplier
+    slider.scrollLeft = scrollLeft - walk;
   });
 </script>
-
 
 </body>
 </html>
