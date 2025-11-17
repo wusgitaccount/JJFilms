@@ -226,20 +226,30 @@ a:visited {
 .tab-content.active {
   display: block;
 }
-@keyframes scroll-left {
+/* @keyframes scroll-left {
     0% {
       transform: translateX(100%);
     }
     100% {
       transform: translateX(-100%);
     }
-  }
+  }*/
 
+  ::-webkit-scrollbar {
+    margin-bottom: 4vh;
+    box-shadow: rgba(10, 37, 64, 0.28) 0px -32px 16px 3px inset;
+    /* box-shadow: inset 0px 0px 3vh 0.3vh #797777; */
+    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.719) 50%, rgba(0, 0, 0, 0) 100%);;
+    border-radius: 50vh;
+    display: inline-block;
+    padding: 1.2vh 1.2vh;
+    text-decoration: none;
+  }
 
 .container-main{
   display: flex;
-  height: 100vh;
-  overflow-y: hidden;
+ height: 100vh;
+   /*overflow-y: hidden;*/
 }
 
 .about {
@@ -252,12 +262,10 @@ a:visited {
 
 #content {
     flex-grow: 1;
-    overflow-x: auto;
     white-space: nowrap;
-    display: flex;
     align-items: center;
     padding: 20px;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 #content.active {
@@ -266,8 +274,8 @@ a:visited {
 
 
 .timeline {
-    display: flex;
-    gap: 0px;
+  display: flex;
+  gap: 0px;
 }
 
 .timeline-item {
@@ -365,6 +373,7 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
     filter: dropshadow(color=#ffffff, offx=2, offy=2);
     font-style: italic;
     text-decoration: underline dotted;
+    
    }
 
     #contents a:hover {
@@ -430,11 +439,13 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
   flex: 0 0 auto;
   /* only manually resize */
   max-height: 95%;
-  max-width: 100%;
+  max-width: 95%;
   white-space: nowrap;
   overflow: hidden;
   top: 40px;
   position: relative;
+    margin-left: auto;
+  margin-right: auto;
 }
 
 .splitter-horizontal {
