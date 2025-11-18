@@ -549,7 +549,7 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
 }
     #film {
     position: absolute;
-    top: 15%;
+    top: 25%;
     left: 35%;
 
 }
