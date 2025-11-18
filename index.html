@@ -23,8 +23,8 @@
         <br><br>
         </button>
     </p>
-    <a href="portal.html"><img width="30px" src= "./assets/door.gif"></a>
-    <div id="grad"></div>-->
+    <a href="portal.html"><img width="30px" src= "./assets/door.gif"></a>-->
+    <div id="grad"></div>
   </div>
 
   <div id="content">
@@ -419,14 +419,17 @@
         </video>
       </div>
     </div> -->
-
+      <div class="vid-content" id="tab1">  
+        <iframe id="film" width="560" height="315" src="https://www.youtube.com/embed/6k_CYYFepag?si=h54fhFGMXTd8fpRR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     <div class="timeline">
+      <div class="vid-button" data-tab="tab1">
       <div class="timeline-item">
-        <a href="catharsis.html">
+       
         <img src= "./assets/Catharsis.png">
         <span class="tooltiptext"> Catharsis (2021)</span>
-        </a>
-      </div>
+        
+      </div></div>
 
       <div class="hover-bg">
         <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
@@ -443,37 +446,25 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="/js/jquery.mousewheel.js"></script>
 
-<script>
-  const slider = document.getElementById('content');
-  let isDown = false;
-  let startX;
-  let scrollLeft;
 
-  slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
+ 
+ <script>
+  const buttons = document.querySelectorAll(".vid-button");
+  const contents = document.querySelectorAll(".vid-content");
 
-  slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.classList.remove('active');
-  });
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Remove active class from all buttons and contents
+      buttons.forEach(btn => btn.classList.remove("active"));
+      contents.forEach(content => content.classList.remove("active"));
 
-  slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.classList.remove('active');
-  });
-
-  slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2; // scroll-fastness multiplier
-    slider.scrollLeft = scrollLeft - walk;
+      // Add active class to the clicked button and corresponding content
+      button.classList.add("active");
+      document.getElementById(button.dataset.tab).classList.add("active");
+    });
   });
 </script>
+
 
 </body>
 </html>

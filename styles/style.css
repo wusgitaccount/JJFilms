@@ -536,6 +536,24 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
      font-size: 14px;
    }
 }
+
+
+/* Vid content */
+.vid-content {
+  display: none;
+  padding: 20px;
+}
+
+.vid-content.active {
+  display: block;
+}
+    #film {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+
+}
+
 /* desktop breakpoint */
 @media (min-width:1024px) {
     .grid {
