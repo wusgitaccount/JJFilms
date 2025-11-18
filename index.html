@@ -517,20 +517,34 @@
 
  
  <script>
-  const buttons = document.querySelectorAll(".vid-button");
-  const contents = document.querySelectorAll(".vid-content");
+const buttons = document.querySelectorAll(".vid-button");
+const contents = document.querySelectorAll(".vid-content");
 
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      // Remove active class from all buttons and contents
-      buttons.forEach(btn => btn.classList.remove("active"));
-      contents.forEach(content => content.classList.remove("active"));
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
 
-      // Add active class to the clicked button and corresponding content
-      button.classList.add("active");
-      document.getElementById(button.dataset.tab).classList.add("active");
+    // Stop ALL videos by resetting iframe src
+    contents.forEach(content => {
+      const iframe = content.querySelector("iframe");
+      if (iframe) {
+        const src = iframe.src;
+        iframe.src = "";      // clear src to stop playback
+        iframe.src = src;     // restore src for future plays
+      }
+      content.classList.remove("active");
     });
+
+    // Remove active from all buttons
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    // Activate the selected content & button
+    const tab = document.getElementById(button.dataset.tab);
+    if (tab) tab.classList.add("active");
+
+    button.classList.add("active");
   });
+});
+
 </script>
 
 
