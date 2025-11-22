@@ -6,6 +6,22 @@ body{
   margin: 0;
   background-color: 000000;
 }
+/* Full-page vignette overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: radial-gradient(
+    ellipse at center,
+  rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 1) 100%);
+    border: 15px solid black;
+
+
+  
+}
+
 
 * {
 	box-sizing: border-box;
@@ -248,8 +264,9 @@ a:visited {
 
 .container-main{
   display: flex;
- height: 100vh;
+  height: 100vh;
    /*overflow-y: hidden;*/
+
 }
 
 .about {
@@ -337,6 +354,7 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
     width: auto !important;
     height: auto !important;
     margin-bottom: 0;
+
 }
 
 #about {
@@ -347,9 +365,9 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
      left: 0;
      transition: height 0.3s ease-in-out;
      overflow: hidden;
-     height: 50px;
-     background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.719) 50%, rgba(0, 0, 0, 0) 100%);
-     z-index: 1000;
+     height: 70px;
+     background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.719) 80%, rgba(0, 0, 0, 0) 100%);
+    z-index: 10000;
      font-size: 14px;
    }
 
@@ -539,13 +557,24 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
 
 
 /* Vid content */
+
+
 .vid-content {
-  display: none;
-  padding: 20px;
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .vid-content.active {
-  display: block;
+  display: flex;
+}
+
+/* Center iframe inside */
+.vid-content iframe {
+  margin: 0 auto;
 }
     #film {
     position: absolute;
