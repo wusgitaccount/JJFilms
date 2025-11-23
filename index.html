@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 
-<body ondblclick="document.getElementById('sidebar').classList.toggle('active')">
+<body>
 
 <div class="container-main">
 
@@ -97,6 +97,7 @@
       <div class="vid-content" id="tab1">  
         <iframe id="film" width="560" height="315" src="https://www.youtube.com/embed/6k_CYYFepag?si=h54fhFGMXTd8fpRR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
+<div id="sidebar">
 
     <div class="timeline">
       <div class="timeline-item" data-caption="Ars Moriendi (2025)">
@@ -157,7 +158,6 @@
       </video>
     </div>
     </div>
-
 
   <div class="timeline">
     <div class="timeline-item">
@@ -505,6 +505,8 @@
         </video>
       </div>
     </div>
+</div>
+<button id="sidebar-toggle"><img src="./assets/footer.png"></button>
 
     </div>
   </div>
@@ -545,6 +547,14 @@ buttons.forEach(button => {
   });
 });
 
+</script>
+<script>
+  const sidebar = document.getElementById("sidebar");
+  const toggle = document.getElementById("sidebar-toggle");
+
+  toggle.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+  });
 </script>
 
 
