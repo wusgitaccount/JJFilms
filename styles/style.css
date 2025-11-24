@@ -386,7 +386,7 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
     display: flex;
     position: fixed;
     top: 50%;
-    left: 50%;
+    left:50%;
     transform: translate(-50%, -50%);
     z-index: -1;
     pointer-events: none;
@@ -411,6 +411,7 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
      width: 100%;
      padding: 1em;
      position: fixed;
+font-family: "acumin-pro-extra-condensed", sans-serif;
 
      overflow: hidden;
      height: 70px;
@@ -695,6 +696,7 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
 /* Desktop: sidebar behaves normally */
 #sidebar {
   position: static;
+
 }
 
 
