@@ -36,12 +36,12 @@
     <div id="grad"></div>  </div>
 
   <div class="about-right">
-    <p> <a href="mailto:your@email.com">email</a></p>
-    <p>
-      <a href="https://instagram.com/jj.farry" target="_blank">
-        @jj.farry
-      </a>
-    </p>
+      <p><a href="https://instagram.com/jj.farry" target="_blank">
+        insta
+      </a>, 
+     <a href="mailto:your@email.com">email</a></p>
+   
+
   </div>
 </section>
 
@@ -131,6 +131,7 @@
       </video>
     </div>
     </div>
+    
 
     <div class="timeline">
       <div class="timeline-item" data-caption="Assimilation (2025)">
@@ -573,6 +574,22 @@ buttons.forEach(button => {
   toggle.addEventListener("click", () => {
     sidebar.classList.toggle("active");
   });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".timeline-item");
+
+  items.forEach(item => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      items.forEach(i => i.classList.remove("active"));
+      item.classList.add("active");
+    });
+  });
+});
 </script>
 
 
