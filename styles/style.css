@@ -6,7 +6,7 @@ body{
   margin: 0;
   background-color: 000000;
 }
-/* Full-page vignette overlay */
+/* Full-page vignette overlay 
 body::before {
   content: "";
   position: fixed;
@@ -17,7 +17,7 @@ body::before {
     ellipse at center,
   rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 1) 100%);
     border: 15px solid black;
-}
+}*/
 
 
 * {
