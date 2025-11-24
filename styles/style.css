@@ -17,9 +17,6 @@ body::before {
     ellipse at center,
   rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 1) 100%);
     border: 15px solid black;
-
-
-  
 }
 
 
@@ -288,6 +285,59 @@ a:visited {
 #content.active {
   cursor: grabbing;
 }
+/* Wrapper controls movement */
+.firefly-wrapper {
+  position: fixed;
+  top: 10%;
+  left: 20%;
+  width: 0;
+  height: 0;
+  animation: wander 18s cubic-bezier(.42,0,.58,1) infinite;
+  z-index: 9999;
+}
+
+/* Clickable glowing orb */
+.firefly {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fffefc 0%, #ffffff 40%, #ffffff 100%);
+  box-shadow:
+    0 0 8px rgba(246, 246, 246, 0.9),
+    0 0 20px rgba(255, 255, 252, 0.8),
+    0 0 35px #f3f2f2b3;
+  animation: pulse 2.2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+/* Soft glowing pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Organic wandering motion */
+@keyframes wander {
+  0%   { transform: translate(0, 0); }
+  10%  { transform: translate(60px, -40px); }
+  20%  { transform: translate(-30px, 30px); }
+  30%  { transform: translate(90px, 10px); }
+  40%  { transform: translate(-70px, -50px); }
+  50%  { transform: translate(-20px, 70px); }
+  60%  { transform: translate(50px, -20px); }
+  70%  { transform: translate(-90px, 40px); }
+  80%  { transform: translate(30px, 60px); }
+  90%  { transform: translate(-40px, -30px); }
+  100% { transform: translate(0, 0); }
+}
+
 
 
 .timeline {
@@ -361,19 +411,56 @@ body:not(.mobile) .timeline-item:hover + .hover-bg {
      width: 100%;
      padding: 1em;
      position: fixed;
-     top: 0;
-     left: 0;
-     transition: height 0.3s ease-in-out;
+
      overflow: hidden;
      height: 70px;
      background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.719) 80%, rgba(0, 0, 0, 0) 100%);
-    z-index: 10000;
+     z-index: 10000;
      font-size: 14px;
+       display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+
    }
 
-   #about.expanded {
-     height: 200px;
-   }
+
+/* Left side (your main text) */
+.about-left {
+  flex: 2;
+}
+
+/* Right side (contact & insta block) */
+.about-right {
+  flex: 1;
+  max-width: 280px;
+  text-align: right;
+}
+
+
+.about-right a {
+  color: #fff; /* adjust to your theme */
+  text-decoration: none;
+}
+
+.about-right a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .about-right {
+    text-align: left; /* or center if you prefer */
+    max-width: 100%;
+  }
+}
+
+
 #contents {
      width: 100%;
      padding: 1em;
