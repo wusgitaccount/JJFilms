@@ -361,8 +361,7 @@ background-position: center;
   font-size: 16px;
   border-radius: 10px;
   text-align: center;
-  transition: transform .2s;
-  transition: background 0.5s;
+
   cursor: pointer;
 }
 
@@ -371,7 +370,7 @@ background-position: center;
   height: 100%;
   object-fit: cover;
 }
-.timeline-item:hover  {
+.vid-button:hover  {
     transform: scale(1.3);
     
 }
