@@ -263,16 +263,10 @@ a:visited {
   display: flex;
   height: 100vh;
    /*overflow-y: hidden;*/
-
+  font-family: "acumin-pro-extra-condensed", sans-serif;
 }
 
-.about {
-  padding: 0 20px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  position: absolute;
-}
+
 
 #content {
     flex-grow: 1;
@@ -280,6 +274,7 @@ a:visited {
     align-items: center;
     padding: 20px;
     overflow-y: auto;
+    padding-top: 50px;
 }
 
 #content.active {
@@ -358,7 +353,6 @@ a:visited {
   transition: transform .2s;
   transition: background 0.5s;
   cursor: pointer;
-  opacity: 0.5;
 }
 
 .timeline-item img {
@@ -367,35 +361,32 @@ a:visited {
   object-fit: cover;
 }
 .timeline-item:hover  {
-    transform: scale(1.5);
+    transform: scale(1.3);
     opacity: 1;
     z-index:999;
 }
 
-.hover-bg {
+.timeline-item .hover-bg {
     visibility: hidden;
-}
-
-body:not(.mobile) .timeline-item:active + .hover-bg {
-    visibility: visible;
+    opacity: 0;
+    transition: opacity 0.3s ease;
     pointer-events: none;
 
-}
-
-.hover-bg {
     display: flex;
     position: fixed;
     top: 50%;
-    left:50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1;
-    pointer-events: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-/* Change width and height to scale images */
+    z-index: -1;  /* MUST be positive!! */
     width: 100vw;
     height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-item.active .hover-bg {
+    visibility: visible;
+    opacity: 1;
 }
 
 .hover-bg video {
@@ -408,23 +399,28 @@ body:not(.mobile) .timeline-item:active + .hover-bg {
 }
 
 #about {
-     width: 100%;
-     padding: 1em;
-     position: fixed;
-font-family: "acumin-pro-extra-condensed", sans-serif;
-
-     overflow: hidden;
-     height: 60px;
-     background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.719) 80%, rgba(0, 0, 0, 0) 100%);
-     z-index: 10000;
-     font-size: 14px;
-       display: flex;
+  width: 100%;
+  padding: 1em;
+  position: fixed;
+  background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.719) 80%, rgba(0, 0, 0, 0) 100%);
+  z-index: 10000;
+  font-size: 14px;
+  display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
 
    }
 
+#jjhome img { display:none; }
+#jjhome:hover img { 
+  display:block; 
+  width:50px;
+  position:absolute;
+  overflow: visible;
+  z-index: 10001;
+  right: 20%;
+}
 
 /* Left side (your main text) */
 .about-left {
@@ -514,9 +510,8 @@ font-family: "acumin-pro-extra-condensed", sans-serif;
      background-color: black;
      color: #fff;
      text-align: center;
-     padding: 5px 0;
+     padding: 5px 5px;
      font-size: 10px;
-
      /* Position the tooltip */
      position: absolute;
      z-index: 1;
@@ -653,6 +648,7 @@ font-family: "acumin-pro-extra-condensed", sans-serif;
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  z-index: 100000;
 }
 
 .vid-content.active {
