@@ -438,6 +438,7 @@ background-position: center;
   overflow: visible;
   z-index: 10001;
   right: 20%;
+  bottom: 0px;
 }
 
 /* Left side (your main text) */
@@ -454,7 +455,7 @@ background-position: center;
 
 
 .about-right a {
-  color: #fff; /* adjust to your theme */
+  color: #fff; 
   text-decoration: none;
 }
 
@@ -470,7 +471,7 @@ background-position: center;
   }
 
   .about-right {
-    text-align: left; /* or center if you prefer */
+    text-align: right; 
     max-width: 100%;
   }
 }
