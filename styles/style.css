@@ -272,6 +272,7 @@ a:visited {
   height: 100vh;
    /*overflow-y: hidden;*/
   font-family: "acumin-pro-extra-condensed", sans-serif;
+  width: 100vw;
 }
 .loader {
 position: fixed;
@@ -722,7 +723,7 @@ background-position: center;
     display: block;
     position: fixed;
     bottom: 10px;
-    right: 10px;
+    right: 0px;
     z-index: 2000;
     border: none;
     padding: 12px 18px;
@@ -737,15 +738,16 @@ background-position: center;
   object-fit: cover;
 }
   /* Sidebar becomes a sliding drawer */
+
   #sidebar {
     position: fixed;
-    top: 0;
+    top: 100px;
     left: -260px;        /* hidden */
     width: 250px;
     height: 100vh;
     overflow-y: auto;
+    overflow-x: hidden;
     background: rgba(0, 0, 0, 0.9);
-    padding: 20px 10px;
     transition: left 0.3s ease;
     z-index: 1500;
   }
