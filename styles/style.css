@@ -277,7 +277,7 @@ a:visited {
 .loader {
 position: fixed;
 top:0;
-left:0;
+right:0;
 background: black;
 background-blend-mode: screen;
 z-index: 1000;
@@ -285,6 +285,12 @@ width: 100vw;
 height: 100vh;
 background-size: cover;
 background-position: center;
+}
+.loader video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
 }
 
 
@@ -303,32 +309,32 @@ background-position: center;
 /* Wrapper controls movement */
 .firefly-wrapper {
   position: fixed;
-  top: 10%;
-  left: 20%;
-  width: 0;
-  height: 0;
-  animation: wander 18s cubic-bezier(.42,0,.58,1) infinite;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 1000px;
+  animation: wander 50s cubic-bezier(.42,0,.58,1) infinite;
   z-index: 9999;
 }
 
-/* Clickable glowing orb */
+/* link to portal*/
 .firefly {
   width: 5px;
   height: 5px;
-  border-radius: 50%;
+  border-radius: 100%;
   background: radial-gradient(circle, #fffefc 0%, #ffffff 40%, #ffffff 100%);
   box-shadow:
     0 0 8px rgba(246, 246, 246, 0.9),
     0 0 20px rgba(255, 255, 252, 0.8),
     0 0 35px #f3f2f2b3;
-  animation: pulse 2.2s ease-in-out infinite;
+  animation: pulse 4.2s ease-in-out infinite;
   cursor: pointer;
 }
 
-/* Soft glowing pulse */
+/* pulse */
 @keyframes pulse {
   0% {
-    transform: scale(1);
+    transform: scale(.5);
   }
   50% {
     transform: scale(1.35);
@@ -338,19 +344,19 @@ background-position: center;
   }
 }
 
-/* Organic wandering motion */
+/* motion */
 @keyframes wander {
   0%   { transform: translate(0, 0); }
-  10%  { transform: translate(60px, -40px); }
-  20%  { transform: translate(-30px, 30px); }
-  30%  { transform: translate(90px, 10px); }
-  40%  { transform: translate(-70px, -50px); }
-  50%  { transform: translate(-20px, 70px); }
-  60%  { transform: translate(50px, -20px); }
-  70%  { transform: translate(-90px, 40px); }
-  80%  { transform: translate(30px, 60px); }
-  90%  { transform: translate(-40px, -30px); }
-  100% { transform: translate(0, 0); }
+  10%  { transform: translate(60%, -40%); }
+  20%  { transform: translate(-30%, 30%); }
+  30%  { transform: translate(9%, 10%); }
+  40%  { transform: translate(-70%, -50%); }
+  50%  { transform: translate(-20%, 70%); }
+  60%  { transform: translate(50%, -20%); }
+  70%  { transform: translate(-90%, 40%); }
+  80%  { transform: translate(30%, 60%); }
+  90%  { transform: translate(-40%x, -30%); }
+  100% { transform: translate(0%, 0%); }
 }
 
 
@@ -380,7 +386,7 @@ background-position: center;
   object-fit: cover;
 }
 .vid-button:hover  {
-    transform: scale(1.3);
+  transform: scale(1.3);
   cursor: url("../assets/cursor.png"), auto;
 }
 
@@ -442,12 +448,11 @@ background-position: center;
   bottom: 0px;
 }
 
-/* Left side (your main text) */
 .about-left {
   flex: 2;
 }
 
-/* Right side (contact & insta block) */
+/* (contact & insta) */
 .about-right {
   flex: 1;
   max-width: 280px;
@@ -756,5 +761,13 @@ background-position: center;
   #sidebar.active {
     left: 0;
   }
-
+.vid-button:hover  {
+  transform: scale(0);
+}
+.hover-bg {
+  display: none;
+}
+.loader {
+  display: none;
+}
 }
