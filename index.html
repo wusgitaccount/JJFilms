@@ -595,20 +595,26 @@ buttons.forEach(button => {
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll(".timeline-item");
-  const sidebar = document.getElementById("sidebar"); // change selector if needed
+  const sidebar = document.getElementById("sidebar"); // <- ensure access here
 
   items.forEach(item => {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
 
       items.forEach(i => i.classList.remove("active"));
+
+
       item.classList.add("active");
 
-      // CLOSE SIDEBAR
-      sidebar.classList.remove("open");
+
+      sidebar.classList.remove("active");
     });
   });
 });
 </script>
+
+
 
 
 

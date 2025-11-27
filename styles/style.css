@@ -767,11 +767,4 @@ background-position: center;
   display: none;
 }
 
-#film {
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
 }
