@@ -684,11 +684,10 @@ background-position: center;
 .vid-content iframe {
   margin: 0 auto;
 }
-    #film {
+#film {
     position: absolute;
     top: 25%;
     left: 35%;
-
 }
 
 /* desktop breakpoint */
@@ -742,7 +741,7 @@ background-position: center;
   height: 100%;
   object-fit: cover;
 }
-  /* Sidebar becomes a sliding drawer */
+  /* sidebar slider */
 
   #sidebar {
     position: fixed;
@@ -767,7 +766,12 @@ background-position: center;
 .hover-bg {
   display: none;
 }
-.loader {
-  display: none;
+
+#film {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 }
