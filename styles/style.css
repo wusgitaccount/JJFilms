@@ -307,7 +307,7 @@ background-position: center;
   cursor: grabbing;
 }
 /* Wrapper controls movement */
-.firefly-wrapper {
+.portal-wrapper {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -318,7 +318,7 @@ background-position: center;
 }
 
 /* link to portal*/
-.firefly {
+.portal {
   width: 5px;
   height: 5px;
   border-radius: 100%;
