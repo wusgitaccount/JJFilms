@@ -409,9 +409,11 @@ background-position: center;
     justify-content: center;
 }
 
-.timeline-item.active .hover-bg {
-    visibility: visible;
-    opacity: 1;
+
+.timeline-item.active .hover-bg,
+.vid-content.active ~ .hover-bg {
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .hover-bg video {
@@ -667,7 +669,7 @@ background-position: center;
 
 
 .vid-content {
-  display: none; /* hidden by default */
+ 
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -689,6 +691,7 @@ background-position: center;
     top: 25%;
     left: 35%;
 }
+
 
 /* desktop breakpoint */
 @media (min-width:1024px) {
@@ -766,5 +769,34 @@ background-position: center;
     .loader {
       display: none;
     }
-
+    #film {
+    position: absolute;
+    top: 0%;
+    left: 0%;
 }
+     .vid-content {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: 9999999; /* Above everything */
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vid-content.active {
+    display: flex;
+  }
+
+  .vid-content iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+
+
