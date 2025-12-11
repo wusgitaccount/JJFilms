@@ -631,6 +631,14 @@ background-position: center;
 
 /* --- MOBILE STYLES --- */
 @media (max-width: 768px) {
+  #about {
+
+  padding: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+
+
+   }
 
       /* Show toggle button */
       #sidebar-toggle {
