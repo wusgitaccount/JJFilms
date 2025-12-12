@@ -571,12 +571,14 @@ buttons.forEach(button => {
 
 </script>
 <script>
-  const sidebar = document.getElementById("sidebar");
-  const toggle = document.getElementById("sidebar-toggle");
+const sidebar = document.getElementById("sidebar");
+const toggle = document.getElementById("sidebar-toggle");
 
+if (sidebar && toggle) {
   toggle.addEventListener("click", () => {
     sidebar.classList.toggle("active");
   });
+}
 </script>
 
 <script>
