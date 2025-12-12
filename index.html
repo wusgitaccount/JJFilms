@@ -535,13 +535,54 @@
          });
       </script>
  
+
+<script>
+  const sidebar = document.getElementById("sidebar");
+  const toggle = document.getElementById("sidebar-toggle");
+
+  toggle.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".timeline-item");
+  const sidebar = document.getElementById("sidebar");
+
+  items.forEach(item => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      items.forEach(i => i.classList.remove("active"));
+      item.classList.add("active");
+      if (sidebar) sidebar.classList.remove("active");
+
+      // On mobile, also activate the corresponding vid-content if data-tab exists
+      if (window.innerWidth <= 900) {
+        const vidButton = item.querySelector('.vid-button');
+        if (vidButton && vidButton.dataset.tab) {
+          const tab = document.getElementById(vidButton.dataset.tab);
+          if (tab) {
+            // Deactivate all vid-content
+            document.querySelectorAll('.vid-content').forEach(c => c.classList.remove('active'));
+            tab.classList.add('active');
+          }
+        }
+      }
+    });
+  });
+});
+</script>
+
  <script>
 const buttons = document.querySelectorAll(".vid-button");
 const contents = document.querySelectorAll(".vid-content");
 
 buttons.forEach(button => {
   button.addEventListener("click", () => {
-    console.log('Button clicked:', button.dataset.tab); // Debug log
+
     // Stop ALL videos by resetting iframe src
     contents.forEach(content => {
       const iframe = content.querySelector("iframe");
@@ -558,52 +599,13 @@ buttons.forEach(button => {
 
     // Activate the selected content & button
     const tab = document.getElementById(button.dataset.tab);
-    if (tab) {
-      tab.classList.add("active");
-      console.log('Activated tab:', tab.id); // Debug log
-    } else {
-      console.log('No tab found for:', button.dataset.tab); // Debug log
-    }
+    if (tab) tab.classList.add("active");
 
     button.classList.add("active");
   });
 });
 
 </script>
-<script>
-const sidebar = document.getElementById("sidebar");
-const toggle = document.getElementById("sidebar-toggle");
-
-if (sidebar && toggle) {
-  toggle.addEventListener("click", () => {
-    sidebar.classList.toggle("active");
-  });
-}
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".timeline-item");
-  const sidebar = document.getElementById("sidebar"); // <- ensure access here
-
-  items.forEach(item => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      items.forEach(i => i.classList.remove("active"));
-
-
-      item.classList.add("active");
-
-
-      sidebar.classList.remove("active");
-    });
-  });
-});
-</script>
-
-
 
 
 
