@@ -553,8 +553,13 @@ background-position: center;
     position: static !important;
     top: auto !important;
     width: 100% !important;
+    margin-top: 200px;   /* Add spacing below #about */
     margin-bottom: 0;
-    z-index: 2001 !important; /* ensure above sidebar */
+    z-index: 2001 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
   .hover-bg {
     display: none !important;
@@ -652,6 +657,7 @@ background-position: center;
     .loader {
       display: none;
     }
+
 }
 
 
