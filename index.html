@@ -541,7 +541,7 @@ const contents = document.querySelectorAll(".vid-content");
 
 buttons.forEach(button => {
   button.addEventListener("click", () => {
-
+    console.log('Button clicked:', button.dataset.tab); // Debug log
     // Stop ALL videos by resetting iframe src
     contents.forEach(content => {
       const iframe = content.querySelector("iframe");
@@ -558,7 +558,12 @@ buttons.forEach(button => {
 
     // Activate the selected content & button
     const tab = document.getElementById(button.dataset.tab);
-    if (tab) tab.classList.add("active");
+    if (tab) {
+      tab.classList.add("active");
+      console.log('Activated tab:', tab.id); // Debug log
+    } else {
+      console.log('No tab found for:', button.dataset.tab); // Debug log
+    }
 
     button.classList.add("active");
   });
