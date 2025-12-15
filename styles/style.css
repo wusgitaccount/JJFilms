@@ -566,6 +566,7 @@ background-position: center;
     justify-content: center;
     align-items: center;
     height: 50%;
+    overflow-y: hidden;
 
   }
   .hover-bg {
