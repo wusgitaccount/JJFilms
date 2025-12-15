@@ -565,6 +565,7 @@ background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 50%;
 
   }
   .hover-bg {
@@ -626,12 +627,15 @@ background-position: center;
         position: fixed;
         bottom: 10px;
         right: 0px;
-        z-index: 900;
+        z-index: 10000;
         border: none;
+        text-align: right;
         padding: 12px 18px;
-        background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.719) 50%, rgba(0, 0, 0, 0) 100%);
+        background: none;
         width: 50%;
-
+        font-size: 20px;
+        color: white;
+        font-style:bold;
       }
 
     #sidebar-toggle img {
