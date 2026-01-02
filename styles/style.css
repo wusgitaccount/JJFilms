@@ -671,7 +671,9 @@ background-position: center;
     .loader {
       display: none;
     }
-
+      .about-right a[href="work.html"] {
+    display: none;
+  }
 }
 
 
